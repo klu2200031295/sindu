@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create/Edit Job</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+  <h2>Create/Edit Job</h2>
+  <form action="/admin/jobs/create" method="post">
+    <div class="form-group">
+      <label for="jobTitle">Job Title:</label>
+      <input type="text" class="form-control" id="jobTitle" name="jobTitle" required>
+    </div>
+    <div class="form-group">
+      <label for="jobDescription">Job Description:</label>
+      <textarea class="form-control" id="jobDescription" name="jobDescription" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="department">Department:</label>
+      <input type="text" class="form-control" id="department" name="department" required>
+    </div>
+    <div class="form-group">
+      <label for="jobType">Job Type:</label>
+      <select class="form-control" id="jobType" name="jobType" required>
+        <option value="" disabled selected>Select job type</option>
+        <option value="Part-Time">Part-Time</option>
+        <option value="Full-Time">Full-Time</option>
+        <option value="Internship">Internship</option>
+        <option value="Contract">Contract</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="applicationDeadline">Application Deadline:</label>
+      <input type="date" class="form-control" id="applicationDeadline" name="applicationDeadline" required>
+    </div>
+    <div class="form-group">
+      <label for="studentEligibilityCriteria">Eligibility Criteria for Students:</label>
+      <select class="form-control" id="studentEligibilityCriteria" name="studentEligibilityCriteria" required>
+        <option value="" disabled selected>Select eligibility criteria</option>
+        <option value="Undergraduate">Undergraduate</option>
+        <option value="Graduate">Graduate</option>
+        <option value="PhD">PhD</option>
+        <option value="Any">Any</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
